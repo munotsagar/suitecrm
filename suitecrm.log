@@ -1,0 +1,124 @@
+Wed Mar 14 20:06:06 2018 [14256][1][FATAL]  Query Failed: INSERT INTO aos_invoices_cstm (id_c ,credit_c ,final_outstanding_balance_c ,invoice_number_c ,payment_in_cash_cheque_c ,payment_in_credit_card_c ,payment_in_wire_transferred_c ) VALUES ('31be0d38-09b1-3111-856e-5aa972fe10e1' ,0 ,0 ,5001 ,0 ,0 ,0 ): MySQL error 1062: Duplicate entry '5001' for key 'invoice_number_c'
+Wed Mar 14 20:19:11 2018 [14256][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Wed Mar 14 20:19:11 2018 [14256][1][FATAL] Exception in Controller: Invoice number already exists into database!.
+Wed Mar 14 20:19:11 2018 [14256][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\custom\modules\AOS_Invoices\updateProductDetailsLogicHook.php(261): sugar_die('Invoice number ...')
+#1 E:\xampp\htdocs\atomicsolutions\include\utils\LogicHook.php(262): updateProductDetailsLogicHook->checkinvoiceNumberExists(Object(AOS_Invoices), 'before_save', Array)
+#2 E:\xampp\htdocs\atomicsolutions\include\utils\LogicHook.php(199): LogicHook->process_hooks(Array, 'before_save', Array)
+#3 E:\xampp\htdocs\atomicsolutions\data\SugarBean.php(2692): LogicHook->call_custom_logic('AOS_Invoices', 'before_save', Array)
+#4 E:\xampp\htdocs\atomicsolutions\data\SugarBean.php(2029): SugarBean->call_custom_logic('before_save', Array)
+#5 E:\xampp\htdocs\atomicsolutions\modules\AOS_Invoices\AOS_Invoices.php(75): SugarBean->save(false)
+#6 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(683): AOS_Invoices->save(false)
+#7 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(523): SugarController->action_save()
+#8 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(491): SugarController->do_action()
+#9 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(465): SugarController->handle_action()
+#10 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(373): SugarController->process()
+#11 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#12 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#13 {main}
+Wed Mar 14 20:19:33 2018 [14256][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Wed Mar 14 20:19:33 2018 [14256][1][FATAL] Exception in Controller: Invoice number already exists into database!.
+Wed Mar 14 20:19:33 2018 [14256][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\custom\modules\AOS_Invoices\updateProductDetailsLogicHook.php(261): sugar_die('Invoice number ...')
+#1 E:\xampp\htdocs\atomicsolutions\include\utils\LogicHook.php(262): updateProductDetailsLogicHook->checkinvoiceNumberExists(Object(AOS_Invoices), 'before_save', Array)
+#2 E:\xampp\htdocs\atomicsolutions\include\utils\LogicHook.php(199): LogicHook->process_hooks(Array, 'before_save', Array)
+#3 E:\xampp\htdocs\atomicsolutions\data\SugarBean.php(2692): LogicHook->call_custom_logic('AOS_Invoices', 'before_save', Array)
+#4 E:\xampp\htdocs\atomicsolutions\data\SugarBean.php(2029): SugarBean->call_custom_logic('before_save', Array)
+#5 E:\xampp\htdocs\atomicsolutions\modules\AOS_Invoices\AOS_Invoices.php(75): SugarBean->save(false)
+#6 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(683): AOS_Invoices->save(false)
+#7 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(523): SugarController->action_save()
+#8 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(491): SugarController->do_action()
+#9 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(465): SugarController->handle_action()
+#10 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(373): SugarController->process()
+#11 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#12 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#13 {main}
+Wed Mar 14 20:32:09 2018 [14256][1][FATAL]  Query Failed: INSERT INTO aos_invoices_cstm (id_c ,credit_c ,final_outstanding_balance_c ,invoice_number_c ,payment_in_cash_cheque_c ,payment_in_credit_card_c ,payment_in_wire_transferred_c ) VALUES ('1c92664d-e617-d964-32b8-5aa978e031b7' ,20 ,7889.5 ,5008 ,7929.5 ,8325.98 ,7944.5 ): MySQL error 1062: Duplicate entry '5008' for key 'invoice_number_c'
+Wed Mar 14 20:34:24 2018 [14256][1][FATAL]  Query Failed: INSERT INTO aos_invoices_cstm (id_c ,credit_c ,final_outstanding_balance_c ,invoice_number_c ,payment_in_cash_cheque_c ,payment_in_credit_card_c ,payment_in_wire_transferred_c ) VALUES ('1c92664d-e617-d964-32b8-5aa978e031b7' ,NULL ,7909.5 ,5008 ,7929.5 ,8325.98 ,7944.5 ): MySQL error 1062: Duplicate entry '5008' for key 'invoice_number_c'
+Wed Mar 14 20:36:28 2018 [14256][1][FATAL]  Query Failed: INSERT INTO aos_invoices_cstm (id_c ,credit_c ,final_outstanding_balance_c ,invoice_number_c ,payment_in_cash_cheque_c ,payment_in_credit_card_c ,payment_in_wire_transferred_c ) VALUES ('1c92664d-e617-d964-32b8-5aa978e031b7' ,NULL ,7909.5 ,5008 ,7929.5 ,8325.98 ,7944.5 ): MySQL error 1062: Duplicate entry '5008' for key 'invoice_number_c'
+Wed Mar 14 20:39:10 2018 [14256][1][FATAL]  Query Failed: INSERT INTO aos_invoices_cstm (id_c ,credit_c ,final_outstanding_balance_c ,invoice_number_c ,payment_in_cash_cheque_c ,payment_in_credit_card_c ,payment_in_wire_transferred_c ) VALUES ('1c92664d-e617-d964-32b8-5aa978e031b7' ,NULL ,7909.5 ,5008 ,7929.5 ,8325.98 ,7944.5 ): MySQL error 1062: Duplicate entry '5008' for key 'invoice_number_c'
+Mon Mar 26 15:04:16 2018 [1512][-none-][FATAL] Could not connect to DB server localhost as root. port : No connection could be made because the target machine actively refused it.
+
+Mon Mar 26 19:32:52 2018 [17124][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Mon Mar 26 19:32:52 2018 [17124][1][FATAL] Exception in Controller: Error retrieving record. This record may be deleted or you may not be authorized to view it.
+Mon Mar 26 19:32:52 2018 [17124][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\include\MVC\View\views\view.detail.php(101): sugar_die('Error retrievin...')
+#1 E:\xampp\htdocs\atomicsolutions\include\MVC\View\SugarView.php(199): ViewDetail->display()
+#2 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(432): SugarView->process()
+#3 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(375): SugarController->processView()
+#4 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#5 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#6 {main}
+Mon Mar 26 19:37:43 2018 [17124][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Mon Mar 26 19:37:43 2018 [17124][1][FATAL] Exception in Controller: Error retrieving record. This record may be deleted or you may not be authorized to view it.
+Mon Mar 26 19:37:43 2018 [17124][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\include\MVC\View\views\view.detail.php(101): sugar_die('Error retrievin...')
+#1 E:\xampp\htdocs\atomicsolutions\custom\modules\atomi_Invoice_Commission_Report\views\view.detail.php(95): ViewDetail->display()
+#2 E:\xampp\htdocs\atomicsolutions\include\MVC\View\SugarView.php(199): atomi_Invoice_Commission_ReportViewDetail->display()
+#3 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(432): SugarView->process()
+#4 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(375): SugarController->processView()
+#5 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#6 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#7 {main}
+Mon Mar 26 19:42:02 2018 [17124][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Mon Mar 26 19:42:02 2018 [17124][1][FATAL] Exception in Controller: Error retrieving record. This record may be deleted or you may not be authorized to view it.
+Mon Mar 26 19:42:02 2018 [17124][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\include\MVC\View\views\view.detail.php(101): sugar_die('Error retrievin...')
+#1 E:\xampp\htdocs\atomicsolutions\custom\modules\atomi_Invoice_Commission_Report\views\view.detail.php(64): ViewDetail->display()
+#2 E:\xampp\htdocs\atomicsolutions\include\MVC\View\SugarView.php(199): atomi_Invoice_Commission_ReportViewDetail->display()
+#3 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(432): SugarView->process()
+#4 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(375): SugarController->processView()
+#5 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#6 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#7 {main}
+Mon Mar 26 19:42:27 2018 [17124][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Mon Mar 26 19:42:27 2018 [17124][1][FATAL] Exception in Controller: Error retrieving record. This record may be deleted or you may not be authorized to view it.
+Mon Mar 26 19:42:27 2018 [17124][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\include\MVC\View\views\view.detail.php(101): sugar_die('Error retrievin...')
+#1 E:\xampp\htdocs\atomicsolutions\custom\modules\atomi_Invoice_Commission_Report\views\view.detail.php(64): ViewDetail->display()
+#2 E:\xampp\htdocs\atomicsolutions\include\MVC\View\SugarView.php(199): atomi_Invoice_Commission_ReportViewDetail->display()
+#3 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(432): SugarView->process()
+#4 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(375): SugarController->processView()
+#5 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#6 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#7 {main}
+Mon Mar 26 19:43:07 2018 [17124][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Mon Mar 26 19:43:07 2018 [17124][1][FATAL] Exception in Controller: Error retrieving record. This record may be deleted or you may not be authorized to view it.
+Mon Mar 26 19:43:07 2018 [17124][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\include\MVC\View\views\view.detail.php(101): sugar_die('Error retrievin...')
+#1 E:\xampp\htdocs\atomicsolutions\custom\modules\atomi_Invoice_Commission_Report\views\view.detail.php(64): ViewDetail->display()
+#2 E:\xampp\htdocs\atomicsolutions\include\MVC\View\SugarView.php(199): atomi_Invoice_Commission_ReportViewDetail->display()
+#3 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(432): SugarView->process()
+#4 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(375): SugarController->processView()
+#5 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#6 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#7 {main}
+Wed Mar 28 09:02:52 2018 [4104][-none-][FATAL] Could not connect to DB server localhost as root. port : No connection could be made because the target machine actively refused it.
+
+Wed Mar 28 20:14:33 2018 [5916][1][FATAL]  Query Failed: select aos_products_quotes.product_qty as productQty, aos_invoices.id as invoiceId, aos_invoices.name as invoiceName, aos_products_quotes_cstm.tier_c, aos_products_quotes_cstm.product_tier_5_price_c, DAYOFMONTH(aos_invoices.date_entered) as dayOfInvoice, aos_invoices.date_entered from aos_invoices INNER JOIN aos_products_quotes ON aos_invoices.id=aos_products_quotes.parent_id INNER JOIN aos_products_quotes_cstm ON aos_products_quotes.id=aos_products_quotes_cstm.id_c where aos_invoices.deleted = '0' and aos_invoices.created_by='1' and (YEAR(aos_invoices.date_entered)=2018 and (MONTH(aos_invoices.date_entered)=03 and (DAYOFMONTH(aos_invoices.date_entered)>01 and DAYOFMONTH(aos_invoices.date_entered)<31) order by aos_invoices.date_entered ASC: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by aos_invoices.date_entered ASC' at line 1
+Wed Mar 28 20:14:33 2018 [5916][1][FATAL]  Query Failed: select aos_products_quotes.product_qty as productQty, aos_invoices.id as invoiceId, aos_invoices.name as invoiceName, aos_products_quotes_cstm.tier_c, aos_products_quotes_cstm.product_tier_5_price_c, DAYOFMONTH(aos_invoices.date_entered) as dayOfInvoice, aos_invoices.date_entered from aos_invoices INNER JOIN aos_products_quotes ON aos_invoices.id=aos_products_quotes.parent_id INNER JOIN aos_products_quotes_cstm ON aos_products_quotes.id=aos_products_quotes_cstm.id_c where aos_invoices.deleted = '0' and aos_invoices.created_by='4668226f-4e70-347c-9740-5a9af48bdd5f' and (YEAR(aos_invoices.date_entered)=2018 and (MONTH(aos_invoices.date_entered)=03 and (DAYOFMONTH(aos_invoices.date_entered)>01 and DAYOFMONTH(aos_invoices.date_entered)<31) order by aos_invoices.date_entered ASC: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by aos_invoices.date_entered ASC' at line 1
+Wed Mar 28 20:15:09 2018 [5916][1][FATAL]  Query Failed: select aos_products_quotes.product_qty as productQty, aos_invoices.id as invoiceId, aos_invoices.name as invoiceName, aos_products_quotes_cstm.tier_c, aos_products_quotes_cstm.product_tier_5_price_c, DAYOFMONTH(aos_invoices.date_entered) as dayOfInvoice, aos_invoices.date_entered from aos_invoices INNER JOIN aos_products_quotes ON aos_invoices.id=aos_products_quotes.parent_id INNER JOIN aos_products_quotes_cstm ON aos_products_quotes.id=aos_products_quotes_cstm.id_c where aos_invoices.deleted = '0' and aos_invoices.created_by='1' and (YEAR(aos_invoices.date_entered)=2018 and (MONTH(aos_invoices.date_entered)=03 and (DAYOFMONTH(aos_invoices.date_entered)>01 and DAYOFMONTH(aos_invoices.date_entered)<31) order by aos_invoices.date_entered ASC: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by aos_invoices.date_entered ASC' at line 1
+Wed Mar 28 20:15:09 2018 [5916][1][FATAL]  Query Failed: select aos_products_quotes.product_qty as productQty, aos_invoices.id as invoiceId, aos_invoices.name as invoiceName, aos_products_quotes_cstm.tier_c, aos_products_quotes_cstm.product_tier_5_price_c, DAYOFMONTH(aos_invoices.date_entered) as dayOfInvoice, aos_invoices.date_entered from aos_invoices INNER JOIN aos_products_quotes ON aos_invoices.id=aos_products_quotes.parent_id INNER JOIN aos_products_quotes_cstm ON aos_products_quotes.id=aos_products_quotes_cstm.id_c where aos_invoices.deleted = '0' and aos_invoices.created_by='4668226f-4e70-347c-9740-5a9af48bdd5f' and (YEAR(aos_invoices.date_entered)=2018 and (MONTH(aos_invoices.date_entered)=03 and (DAYOFMONTH(aos_invoices.date_entered)>01 and DAYOFMONTH(aos_invoices.date_entered)<31) order by aos_invoices.date_entered ASC: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by aos_invoices.date_entered ASC' at line 1
+Sun Apr  1 18:18:18 2018 [15788][-none-][FATAL] Could not connect to DB server localhost as root. port : No connection could be made because the target machine actively refused it.
+
+Sat Apr  7 06:17:50 2018 [14256][-none-][FATAL] Could not connect to DB server localhost as root. port : No connection could be made because the target machine actively refused it.
+
+Sat Apr  7 06:48:39 2018 [14256][1][FATAL] Exception handling in E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php:402
+Sat Apr  7 06:48:39 2018 [14256][1][FATAL] Exception in Controller: 
+Sat Apr  7 06:48:39 2018 [14256][1][FATAL] backtrace:
+#0 E:\xampp\htdocs\atomicsolutions\modules\Administration\expandDatabase.php(46): sugar_die('')
+#1 E:\xampp\htdocs\atomicsolutions\include\MVC\View\SugarView.php(791): include_once('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\atomicsolutions\include\MVC\View\views\view.classic.php(74): SugarView->includeClassicFile('modules/Adminis...')
+#3 E:\xampp\htdocs\atomicsolutions\include\MVC\View\SugarView.php(199): ViewClassic->display()
+#4 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(432): SugarView->process()
+#5 E:\xampp\htdocs\atomicsolutions\include\MVC\Controller\SugarController.php(375): SugarController->processView()
+#6 E:\xampp\htdocs\atomicsolutions\include\MVC\SugarApplication.php(105): SugarController->execute()
+#7 E:\xampp\htdocs\atomicsolutions\index.php(52): SugarApplication->execute()
+#8 {main}
+Tue Apr 10 17:36:06 2018 [11420][-none-][FATAL] SECURITY: User authentication for admin failed
+Tue Apr 10 17:36:08 2018 [11420][-none-][FATAL] FAILED LOGIN:attempts[1] - admin
+Tue Apr 10 20:43:23 2018 [11420][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Tue Apr 10 20:43:59 2018 [11420][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Tue Apr 10 20:44:36 2018 [11420][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Tue Apr 10 20:45:39 2018 [11420][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Tue Apr 10 20:50:46 2018 [11420][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
