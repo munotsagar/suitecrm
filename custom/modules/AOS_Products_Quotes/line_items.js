@@ -209,7 +209,7 @@ function insertProductLine(tableid, groupid) {
     b3.innerHTML = "<button title='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_TITLE') + "' accessKey='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_KEY') + "' type='button' tabindex='116' class='button product_part_number_button' value='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "' name='btn1' onclick='openProductPopup(" + prodln + ");'><img src='themes/"+SUGAR.themes.theme_name+"/images/id-ff-select.png' alt='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "'></button>";
 
     var b4 = x.insertCell(5);
-    b4.innerHTML = "<select onchange='tierSelection(this, "+prodln+",\"product_\")' class='sqsEnabled product_name' autocomplete='off' name='product_tier_c[" + prodln + "]' id='product_tier" + prodln + "' ><option value='Tier 5'>Tier 5</option><option value='Tier 4'>Tier 4</option><option value='Tier 3'>Tier 3</option><option value='Tier 2'>Tier 2</option><option value='Tier 1'>Tier 1</option><option value='Tier 0'>Tier 0</option> </select>";
+    b4.innerHTML = "<select onchange='tierSelection(this, "+prodln+",\"product_\")' class='sqsEnabled product_name yui-ac-input' autocomplete='off' name='product_tier_c[" + prodln + "]' id='product_tier" + prodln + "' ><option value='Tier 5'>Tier 5</option><option value='Tier 4'>Tier 4</option><option value='Tier 3'>Tier 3</option><option value='Tier 2'>Tier 2</option><option value='Tier 1'>Tier 1</option><option value='Tier 0'>Tier 0</option> </select>";
 
     var b4 = x.insertCell(6);
     b4.innerHTML = "<input class='sqsEnabled product_qty' autocomplete='off' type='text' name='product_product_discount_amount[" + prodln + "]' id='product_product_discount_amount" + prodln + "' onblur='calculateLine(" + prodln + ",\"product_\");'  maxlength='50' value='0.00' title='' tabindex='116' value=''>";
@@ -219,15 +219,15 @@ function insertProductLine(tableid, groupid) {
     var b4 = x.insertCell(7);
     /*b4.innerHTML = "<input class='sqsEnabled product_qty' autocomplete='off' type='text' name='product_product_tax_percentage_c[" + prodln + "]' id='product_product_tax_percentage_c" + prodln + "' maxlength='50' title='' tabindex='116' value='0.00' onblur='calculateLine(" + prodln + ",\"product_\");'>";*/
 
-    b4.innerHTML = "<select class='sqsEnabled product_qty' type='text' name='product_product_tax_percentage_c[" + prodln + "]' id='product_product_tax_percentage_c" + prodln + "' title='' tabindex='116' value='0.00' onchange='calculateLine(" + prodln + ", \"product_\");'><option value='9.00'>9.00%</option><option value='8.75'>8.75%</option><option value='8.25'>8.25%</option><option value='0.00'>0.00%</option></select>";
+    b4.innerHTML = "<select class='sqsEnabled product_name' type='text' name='product_product_tax_percentage_c[" + prodln + "]' id='product_product_tax_percentage_c" + prodln + "' title='' tabindex='116' value='0.00' onchange='calculateLine(" + prodln + ", \"product_\");'><option value='9.00'>9.00%</option><option value='8.75'>8.75%</option><option value='8.25'>8.25%</option><option value='0.00'>0.00%</option></select>";
 
 
     var b4 = x.insertCell(8);
-    b4.innerHTML = "<input class='sqsEnabled product_qty' autocomplete='off' type='text' name='product_product_tax_amount_c[" + prodln + "]' id='product_product_tax_amount_c" + prodln + "' maxlength='50' title='' tabindex='116' value='0.00' onblur='calculateLine(" + prodln + ",\"product_\");'>";
+    b4.innerHTML = "<input class='sqsEnabled product_name' autocomplete='off' type='text' name='product_product_tax_amount_c[" + prodln + "]' id='product_product_tax_amount_c" + prodln + "' maxlength='50' title='' tabindex='116' value='0.00' onblur='calculateLine(" + prodln + ",\"product_\");'>";
 
 
     var g = x.insertCell(9);
-    g.innerHTML = "<input type='text' name='product_product_total_price[" + prodln + "]' id='product_product_total_price" + prodln + "' maxlength='50' value='0.00' title='' tabindex='116' readonly='readonly' class='product_total_price'><input type='hidden' name='product_group_number[" + prodln + "]' id='product_group_number" + prodln + "' value='"+groupid+"'>";
+    g.innerHTML = "<input type='text' name='product_product_total_price[" + prodln + "]' id='product_product_total_price" + prodln + "' maxlength='50'  class='sqsEnabled product_name' value='0.00' title='' tabindex='116' readonly='readonly' class='product_total_price'><input type='hidden' name='product_group_number[" + prodln + "]' id='product_group_number" + prodln + "' value='"+groupid+"'>";
 
     if (typeof currencyFields !== 'undefined'){
         currencyFields.push("product_product_total_price" + prodln);
