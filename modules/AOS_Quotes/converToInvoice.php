@@ -46,11 +46,40 @@
 	}
 	$quote->total_amount = format_number($quote->total_amount);
 	$quote->save();
-	
+
+
+
+	/**
+	 * Get Invoice Number
+	 */
+	global $db;
+	$resultInvNum = $db->query("select * from aos_invoices inner join aos_invoices_cstm on aos_invoices.id=aos_invoices_cstm.id_c where aos_invoices.deleted = '0' ORDER BY aos_invoices.date_entered DESC");
+
+	$num = $resultInvNum->num_rows;
+
+	if($num > 0) {
+
+		$rowInvNum = $db->fetchByAssoc($resultInvNum);
+
+		$invoice_number = $rowInvNum['invoice_number_c'];
+
+		//echo $customer_number;exit;
+
+		if($invoice_number > 0) {
+			$invoice_number = $invoice_number + 7;
+
+		} else {
+			$invoice_number = 5001;
+		}
+	}
+
+
+
 	//Setting Invoice Values
 	$invoice = new AOS_Invoices();
 	$rawRow = $quote->fetched_row;
 	$rawRow['id'] = '';
+	$rawRow['invoice_number_c'] = $invoice_number;
 	$rawRow['template_ddown_c'] = ' ';
 	$rawRow['quote_number'] = $rawRow['number'];
 	$rawRow['number'] = '';
@@ -102,7 +131,8 @@
 	}
 	
 	//Setting Line Items
-	$sql = "SELECT * FROM aos_products_quotes WHERE parent_type = 'AOS_Quotes' AND parent_id = '".$quote->id."' AND deleted = 0";
+	$sql = "SELECT * FROM aos_products_quotes inner join aos_products_quotes_cstm ON aos_products_quotes.id = aos_products_quotes_cstm.id_c WHERE aos_products_quotes.parent_type = 'AOS_Quotes' AND aos_products_quotes.parent_id = '".$quote->id."' AND aos_products_quotes.deleted = 0";
+	//echo $sql;exit;
   	$result = $this->bean->db->query($sql);
 	while ($row = $this->bean->db->fetchByAssoc($result)) {
 		$row['id'] = '';
@@ -120,6 +150,21 @@
 			$row['product_discount_amount'] = format_number($row['product_discount_amount']);
 		}
 		$row['product_unit_price'] = format_number($row['product_unit_price']);
+
+		$row['product_tier_5_price_c'] = format_number($row['product_tier_5_price_c']);
+
+        $row['tier_c'] =  $row['tier_c'];
+
+        $row['type_c'] =  $row['type_c'];
+
+        $row['tax_percentage_c'] = format_number($row['tax_percentage_c']);
+
+        $row['tax_amount_c'] = format_number($row['tax_amount_c']);
+
+        $row['product_tax_amount_c'] = format_number($row['product_tax_amount_c']);
+
+        $row['product_tax_percentage_c'] = format_number($row['product_tax_percentage_c']);
+
 		$row['vat_amt'] = format_number($row['vat_amt']);
 		$row['product_total_price'] = format_number($row['product_total_price']);
 		$row['product_qty'] = format_number($row['product_qty']);

@@ -184,11 +184,12 @@ class AOS_InvoicesViewEdit extends ViewEdit
             /*$("#detailpanel_3").append('<div class="col-xs-12 col-sm-6 ' +
                 'edit-view-row-item"><table id="customFields" cellspacing="5" cellpadding="5" width="600px"><tr><th>Payment Type</th><th>Amount</th><th>Payment Date</th><th>Transaction Number</th></tr>');*/
 
-            var invoice_numberID = $("#invoice_numberID").val();
-
-            $("#invoice_number_c").val(invoice_numberID);
-
             if(invoiceId=="") {
+
+                var invoice_numberID = $("#invoice_numberID").val();
+
+                $("#invoice_number_c").val(invoice_numberID);
+
                 var uniqueId = uniqId();
                 //alert(invoiceId);
                 $("#detailpanel_3").append('<div class="col-xs-12 col-sm-6 ' +
