@@ -47,6 +47,44 @@ class AccountsViewEdit extends ViewEdit
  		parent::__construct();
  		$this->useForSubpanel = true;
  		$this->useModuleQuickCreateTemplate = true;
+
+
+
+
  	}
+
+    function display() {
+        ?>
+        <script language="JavaScript">
+
+            $("document").ready(function(){
+                //alert("Yes...");
+
+                $("#shipping_checkbox").removeAttr("onclick");
+                $("#shipping_checkbox").attr("onclick", "copyAddressFileds()");
+            });
+
+            function copyAddressFileds() {
+
+                if ($('input#shipping_checkbox').is(':checked')) {
+                    $("#shipping_address_street").val($("#billing_address_street").val());
+                    $("#shipping_address_city").val($("#billing_address_city").val());
+                    $("#shipping_address_state").val($("#billing_address_state").val());
+                    $("#shipping_address_postalcode").val($("#billing_address_postalcode").val());
+                    $("#shipping_address_country").val($("#billing_address_country").val());
+                } else {
+                    $("#shipping_address_street").val($("#shipping_address_street").val());
+                    $("#shipping_address_city").val($("#shipping_address_city").val());
+                    $("#shipping_address_state").val($("#shipping_address_state").val());
+                    $("#shipping_address_postalcode").val($("#shipping_address_postalcode").val());
+                    $("#shipping_address_country").val($("#shipping_address_country").val());
+                }
+
+            }
+
+        </script>
+        <?php
+        parent::display();
+    }
 
 }

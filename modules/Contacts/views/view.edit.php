@@ -91,6 +91,37 @@ class ContactsViewEdit extends ViewEdit
 		   echo '</script>';
 		}
 
+        ?>
+        <script language="JavaScript">
+
+            $("document").ready(function(){
+                //alert("Yes...");
+
+                $("#alt_checkbox").removeAttr("onclick");
+                $("#alt_checkbox").attr("onclick", "copyAddressFileds()");
+            });
+
+            function copyAddressFileds() {
+                //alert("Yes...");
+                if ($('input#alt_checkbox').is(':checked')) {
+                    $("#alt_address_street").val($("#primary_address_street").val());
+                    $("#alt_address_city").val($("#primary_address_city").val());
+                    $("#alt_address_state").val($("#primary_address_state").val());
+                    $("#alt_address_postalcode").val($("#primary_address_postalcode").val());
+                    $("#alt_address_country").val($("#primary_address_country").val());
+                } else {
+                    $("#alt_address_street").val($("#alt_address_street").val());
+                    $("#alt_address_city").val($("#alt_address_city").val());
+                    $("#alt_address_state").val($("#alt_address_state").val());
+                    $("#alt_address_postalcode").val($("#alt_address_postalcode").val());
+                    $("#alt_address_country").val($("#alt_address_country").val());
+                }
+
+            }
+
+        </script>
+        <?php
+
 		echo $this->ev->display($this->showTitle);
  	}
 }
