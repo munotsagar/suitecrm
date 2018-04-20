@@ -33,7 +33,13 @@ class UpdateAccountNumberLogicHook {
 
             $bean->customer_number_c = $customer_number;
 
-            if($bean->name!="") {
+            
+        } else {
+                $customer_number = 1234;
+            }
+			$bean->customer_id_c = "ACC-".$customer_number;
+			
+			if($bean->name!="") {
 
                 $string = $bean->name;
                 $words = explode(" ", $string);
@@ -43,9 +49,8 @@ class UpdateAccountNumberLogicHook {
                 }
 
                 $bean->customer_id_c = "ACC-".strtoupper($letters)."-".$customer_number;
-
-            }
-        }
+            }			
+			
         //echo $bean->name;
         //echo $bean->customer_id_c;exit;
     }

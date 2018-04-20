@@ -71,7 +71,9 @@
 		} else {
 			$invoice_number = 5001;
 		}
-	}
+	} else {
+			$invoice_number = 5001;
+		}
 
 
 

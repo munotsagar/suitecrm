@@ -81,7 +81,9 @@ class AOS_InvoicesViewEdit extends ViewEdit
             } else {
                 $invoice_number = 5001;
             }
-        }
+        } else {
+                $invoice_number = 5001;
+            }
         //echo $invoice_number;exit;
         /**
          * Invoice number code end here

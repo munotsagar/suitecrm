@@ -81,7 +81,9 @@ class AOS_QuotesViewEdit extends ViewEdit
             } else {
                 $quote_id = 3001;
             }
-        }
+        } else {
+                $quote_id = 3001;
+            }
         //echo $invoice_number;exit;
         /**
          * Quote Id end here
@@ -94,14 +96,9 @@ class AOS_QuotesViewEdit extends ViewEdit
         $(document).ready(function () {
             //var invoiceId = $("#quote_id_cId").val();
 
-
-
             var quote_id_cID = $("#quote_id_cID").val();
-
+			
             $("#quote_id_c").val(quote_id_cID);
-
-
-
 
             $("#quote_id_c").on('blur', function () {
                 //alert("I am Here....");
@@ -119,12 +116,7 @@ class AOS_QuotesViewEdit extends ViewEdit
                 });
 
             });
-
-
-
         })
-
-
      </script>
         <?php
         parent::display();
