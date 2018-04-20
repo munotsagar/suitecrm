@@ -75,8 +75,6 @@
 			$invoice_number = 5001;
 		}
 
-
-
 	//Setting Invoice Values
 	$invoice = new AOS_Invoices();
 	$rawRow = $quote->fetched_row;
@@ -139,6 +137,11 @@
 	while ($row = $this->bean->db->fetchByAssoc($result)) {
 		$row['id'] = '';
 		$row['parent_id'] = $invoice->id;
+        //updateOnHandProductQty($row['product_id'], $row['product_qty']);
+
+        $db->query("update aos_products_cstm set total_stock_c = (total_stock_c - ".$row['product_qty'].") where  id_c = '".$row['product_id']."'");
+
+
 		$row['parent_type'] = 'AOS_Invoices';
 		$row['group_id'] = $quoteToInvoiceGroupIds[$row['group_id']];
 		if($row['product_cost_price'] != null)
